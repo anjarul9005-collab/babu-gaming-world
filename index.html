@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -8,135 +7,84 @@
 
 <style>
 * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background: linear-gradient(135deg,#080820,#182653);
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
+  margin: 0;
+  background: #080820;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 header {
-    background: #10102d;
-    padding: 28px 10px;
+  padding: 35px 10px;
+  background: #10102d;
 }
 
-.logo {
-    color: #00ffcc;
-    font-size: 27px;
-    font-weight: bold;
-    text-shadow: 0 0 15px #00ffcc;
+h1 {
+  color: #00ffcc;
+  font-size: 28px;
 }
 
 nav {
-    background: #252550;
-    padding: 16px 5px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+  background: #292950;
+  padding: 18px 5px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 7px;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin: 8px;
+  font-weight: bold;
 }
 
-nav a:hover {
-    color: #00ffcc;
+.welcome {
+  padding: 35px 10px;
 }
 
 h2 {
-    color: #00ffcc;
+  color: #00ffcc;
 }
 
-.hero {
-    padding: 35px 10px;
+input {
+  width: 88%;
+  padding: 16px;
+  border: 2px solid #00ffcc;
+  border-radius: 12px;
+  background: #171735;
+  color: white;
+  font-size: 17px;
 }
 
-.search-box input,
-.profile input,
-.profile select,
-.register input {
-    width: 90%;
-    max-width: 350px;
-    padding: 14px;
-    margin: 10px;
-    border: 2px solid #00ffcc;
-    border-radius: 10px;
-    background: #10102d;
-    color: white;
-    font-size: 16px;
+.games {
+  padding: 20px;
 }
 
-.game, .profile, .register {
-    background: #252550;
-    margin: 25px 15px;
-    padding: 25px 15px;
-    border-radius: 20px;
-    transition: .3s;
+.card {
+  background: #292950;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 20px;
 }
 
-.game:hover, .profile:hover {
-    box-shadow: 0 0 20px #00ffcc;
-}
-
-.game img {
-    width: 100%;
-    max-width: 320px;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 15px;
+.card h2 {
+  font-size: 25px;
 }
 
 button {
-    background: #00ffcc;
-    color: #080820;
-    padding: 13px 25px;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 10px;
-}
-
-button:hover {
-    background: white;
-}
-
-.info {
-    display: none;
-    background: #10102d;
-    padding: 15px;
-    border-radius: 12px;
-}
-
-.info a {
-    color: #00ffcc;
-}
-
-.avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #00ffcc;
-    background: #10102d;
-}
-
-#profileMessage, #registerMessage {
-    color: #00ffcc;
+  background: #00ffcc;
+  color: #080820;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
 footer {
-    background: #10102d;
-    padding: 25px;
-    margin-top: 40px;
+  padding: 25px;
+  background: #10102d;
 }
 </style>
 </head>
@@ -144,261 +92,70 @@ footer {
 <body>
 
 <header>
-    <div class="logo">⚡ BABU GAMING WORLD ⚡</div>
-    <p>Welcome to My Gaming Website!</p>
-    <p>PLAY • EXPLORE • ENJOY</p>
+<h1>⚡ BABU GAMING WORLD ⚡</h1>
+<p>Welcome to My Gaming Website!</p>
 </header>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#games">Games</a>
-    <a href="#profile">Profile</a>
-    <a href="#register">Register</a>
-    <a href="#about">About</a>
+<a href="#home">Home</a>
+<a href="#games">Games</a>
+<a href="#about">About</a>
 </nav>
 
-<!-- HOME -->
-
-<section class="hero" id="home">
-    <h2>🎮 Welcome Gamers!</h2>
-    <p>Welcome to Babu Gaming World!</p>
-    <p>Explore Your Favorite Games</p>
+<section class="welcome" id="home">
+<h2>🎮 Welcome Gamers!</h2>
+<p>Explore Your Favorite Games</p>
 </section>
 
-<!-- SEARCH -->
+<input type="text" id="search"
+placeholder="🔍 Search Your Game..."
+oninput="searchGames()">
 
-<div class="search-box">
-    <input type="text" id="gameSearch"
-    placeholder="🔍 Search Your Game..."
-    oninput="searchGames()">
+<section class="games" id="games">
+
+<div class="card">
+<h2>🔥 Free Fire</h2>
+<p>Battle and Enjoy Gaming!</p>
+<button onclick="alert('Welcome to Free Fire!')">Explore</button>
 </div>
 
-<!-- GAMES -->
-
-<section id="games">
-
-<div class="game">
-    <h2>🔥 Free Fire</h2>
-    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600" alt="Gaming">
-    <p>Battle Royale Gaming</p>
-    <button onclick="showInfo('ff')">Explore</button>
-
-    <div class="info" id="ff">
-        <p>Free Fire is a Battle Royale game.</p>
-        <a href="https://ff.garena.com/" target="_blank">Official Website</a>
-    </div>
+<div class="card">
+<h2>🎯 PUBG Mobile</h2>
+<p>Explore the world of PUBG!</p>
+<button onclick="alert('Welcome to PUBG!')">Explore</button>
 </div>
 
-<div class="game">
-    <h2>⛏️ Minecraft</h2>
-    <img src="https://images.unsplash.com/photo-1607513746994-51f730a44832?w=600" alt="Gaming">
-    <p>Build Your Own World</p>
-    <button onclick="showInfo('mc')">Explore</button>
-
-    <div class="info" id="mc">
-        <p>Create your own world!</p>
-        <a href="https://www.minecraft.net/" target="_blank">Official Website</a>
-    </div>
+<div class="card">
+<h2>⚽ eFootball</h2>
+<p>Enjoy Football Gaming!</p>
+<button onclick="alert('Welcome to eFootball!')">Explore</button>
 </div>
 
-<div class="game">
-    <h2>🎯 Roblox</h2>
-    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600" alt="Gaming">
-    <p>Discover Amazing Games</p>
-    <button onclick="showInfo('rb')">Explore</button>
-
-    <div class="info" id="rb">
-        <p>Discover different games!</p>
-        <a href="https://www.roblox.com/" target="_blank">Official Website</a>
-    </div>
+<div class="card">
+<h2>🏎️ Racing Games</h2>
+<p>Enjoy Racing Adventures!</p>
+<button onclick="alert('Welcome to Racing!')">Explore</button>
 </div>
 
-<p id="noResult" style="display:none;">
-    No Game Found!
-</p>
-
 </section>
 
-<!-- PROFILE -->
-
-<section class="profile" id="profile">
-
-    <h2>👤 MY PROFILE</h2>
-
-    <img
-    id="avatar"
-    class="avatar"
-    src="https://placehold.co/120x120/10102d/00ffcc?text=USER"
-    alt="Profile Picture">
-
-    <p>Choose Profile Picture</p>
-
-    <input type="file"
-    id="photo"
-    accept="image/*"
-    onchange="changePhoto(event)">
-
-    <p>Username</p>
-
-    <input type="text"
-    id="username"
-    placeholder="Enter Your Name">
-
-    <p>Favorite Game</p>
-
-    <select id="favorite">
-        <option>Free Fire</option>
-        <option>Minecraft</option>
-        <option>Roblox</option>
-    </select>
-
-    <br>
-
-    <button onclick="saveProfile()">Save Profile</button>
-
-    <h3 id="profileName">Welcome Gamer!</h3>
-    <p id="favoriteText">Favorite Game: Not Selected</p>
-
-    <p id="profileMessage"></p>
-
-</section>
-
-<!-- REGISTRATION -->
-
-<section class="register" id="register">
-
-    <h2>📝 REGISTRATION DEMO</h2>
-
-    <input type="text"
-    id="regName"
-    placeholder="Enter Username"
-    required>
-
-    <input type="email"
-    id="regEmail"
-    placeholder="Enter Email"
-    required>
-
-    <button onclick="demoRegister()">Register</button>
-
-    <p id="registerMessage"></p>
-
-    <small>Demo only. No account is created.</small>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-    <h2>ABOUT US</h2>
-    <p>This is Babu's Gaming Website!</p>
-    <p>Made with HTML, CSS and JavaScript.</p>
-</section>
-
-<footer>
-    <h2>⚡ BABU GAMING WORLD ⚡</h2>
-    <p>© 2026 Babu Gaming World</p>
-    <p>Made with ❤️ by Babu</p>
+<footer id="about">
+<h2>About Babu Gaming World</h2>
+<p>Made with ❤️ by Babu</p>
+<p>© 2026 Babu Gaming World</p>
 </footer>
 
 <script>
-
-// SEARCH GAMES
-
 function searchGames() {
-    let input = document.getElementById("gameSearch")
-    .value.toLowerCase();
+  let search = document.getElementById("search").value.toLowerCase();
+  let cards = document.querySelectorAll(".card");
 
-    let games = document.querySelectorAll(".game");
-    let found = 0;
-
-    games.forEach(function(game) {
-        if(game.textContent.toLowerCase().includes(input)) {
-            game.style.display = "block";
-            found++;
-        } else {
-            game.style.display = "none";
-        }
-    });
-
-    document.getElementById("noResult").style.display =
-    found === 0 ? "block" : "none";
+  cards.forEach(function(card) {
+    card.style.display =
+      card.innerText.toLowerCase().includes(search)
+      ? "block" : "none";
+  });
 }
-
-// EXPLORE BUTTON
-
-function showInfo(id) {
-    let box = document.getElementById(id);
-
-    box.style.display =
-    box.style.display === "block" ? "none" : "block";
-}
-
-// PROFILE PHOTO
-
-function changePhoto(event) {
-    let file = event.target.files[0];
-
-    if(!file) return;
-
-    if(!file.type.startsWith("image/")) {
-        alert("Please select an image.");
-        return;
-    }
-
-    if(file.size > 2 * 1024 * 1024) {
-        alert("Choose an image smaller than 2 MB.");
-        event.target.value = "";
-        return;
-    }
-
-    let reader = new FileReader();
-
-    reader.onload = function(e) {
-        document.getElementById("avatar").src = e.target.result;
-    };
-
-    reader.readAsDataURL(file);
-}
-
-// SAVE PROFILE
-
-function saveProfile() {
-    let name = document.getElementById("username").value.trim();
-    let game = document.getElementById("favorite").value;
-
-    if(name === "") {
-        document.getElementById("profileMessage").textContent =
-        "Please enter your username!";
-        return;
-    }
-
-    document.getElementById("profileName").textContent =
-    "Welcome " + name + "! 🎮";
-
-    document.getElementById("favoriteText").textContent =
-    "Favorite Game: " + game;
-
-    document.getElementById("profileMessage").textContent =
-    "Profile updated for this preview! 🎉";
-}
-
-// DEMO REGISTRATION
-
-function demoRegister() {
-    let name = document.getElementById("regName").value.trim();
-    let email = document.getElementById("regEmail").value.trim();
-
-    if(!name || !email) {
-        document.getElementById("registerMessage").textContent =
-        "Please fill in both fields!";
-        return;
-    }
-
-    document.getElementById("registerMessage").textContent =
-    "Demo completed! Welcome " + name + "! 🎉";
-}
-
 </script>
 
 </body>

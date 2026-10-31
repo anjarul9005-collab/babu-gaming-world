@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Babu Gaming World</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080820;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+header {
+  padding: 35px 10px;
+  background: #10102d;
+}
+
+h1 {
+  color: #00ffcc;
+  font-size: 28px;
+}
+
+nav {
+  background: #292950;
+  padding: 18px 5px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 8px;
+  font-weight: bold;
+}
+
+.welcome {
+  padding: 35px 10px;
+}
+
+h2 {
+  color: #00ffcc;
+}
+
+input {
+  width: 88%;
+  padding: 16px;
+  border: 2px solid #00ffcc;
+  border-radius: 12px;
+  background: #171735;
+  color: white;
+  font-size: 17px;
+}
+
+.games {
+  padding: 20px;
+}
+
+.card {
+  background: #292950;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 20px;
+}
+
+.card h2 {
+  font-size: 25px;
+}
+
+button {
+  background: #00ffcc;
+  color: #080820;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+footer {
+  padding: 25px;
+  background: #10102d;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>⚡ BABU GAMING WORLD ⚡</h1>
+<p>Welcome to My Gaming Website!</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#games">Games</a>
+<a href="#about">About</a>
+</nav>
+
+<section class="welcome" id="home">
+<h2>🎮 Welcome Gamers!</h2>
+<p>Explore Your Favorite Games</p>
+</section>
+
+<input type="text" id="search"
+placeholder="🔍 Search Your Game..."
+oninput="searchGames()">
+
+<section class="games" id="games">
+
+<div class="card">
+<h2>🔥 Free Fire</h2>
+<p>Battle and Enjoy Gaming!</p>
+<button onclick="alert('Welcome to Free Fire!')">Explore</button>
+</div>
+
+<div class="card">
+<h2>🎯 PUBG Mobile</h2>
+<p>Explore the world of PUBG!</p>
+<button onclick="alert('Welcome to PUBG!')">Explore</button>
+</div>
+
+<div class="card">
+<h2>⚽ eFootball</h2>
+<p>Enjoy Football Gaming!</p>
+<button onclick="alert('Welcome to eFootball!')">Explore</button>
+</div>
+
+<div class="card">
+<h2>🏎️ Racing Games</h2>
+<p>Enjoy Racing Adventures!</p>
+<button onclick="alert('Welcome to Racing!')">Explore</button>
+</div>
+
+</section>
+
+<footer id="about">
+<h2>About Babu Gaming World</h2>
+<p>Made with ❤️ by Babu</p>
+<p>© 2026 Babu Gaming World</p>
+</footer>
+
+<script>
+function searchGames() {
+  let search = document.getElementById("search").value.toLowerCase();
+  let cards = document.querySelectorAll(".card");
+
+  cards.forEach(function(card) {
+    card.style.display =
+      card.innerText.toLowerCase().includes(search)
+      ? "block" : "none";
+  });
+}
+</script>
+
+</body>
+</html>

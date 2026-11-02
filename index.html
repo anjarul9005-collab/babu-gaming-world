@@ -4,7 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Babu Gaming</title>
+
+<title>BABU GAMING</title>
 
 <style>
 * {
@@ -14,47 +15,49 @@
 }
 
 body {
-  background: #090d18;
+  background: #080d19;
   color: white;
   font-family: Arial, sans-serif;
 }
 
 header {
-  background: #111a2c;
-  padding: 22px;
+  background: #111c30;
+  padding: 25px 10px;
   text-align: center;
   border-bottom: 2px solid #00e5ff;
 }
 
 header h1 {
   color: #00e5ff;
-  font-size: 30px;
+  font-size: 32px;
 }
 
 nav {
-  text-align: center;
+  background: #10192a;
   padding: 18px;
+  text-align: center;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 10px;
+  margin: 12px;
+  font-weight: bold;
 }
 
 .hero {
   text-align: center;
-  padding: 65px 15px;
-  background: linear-gradient(135deg,#101c3a,#25205a);
+  padding: 75px 15px;
+  background: linear-gradient(135deg,#10254c,#32165b);
 }
 
 .hero h2 {
-  font-size: 32px;
   color: #00e5ff;
+  font-size: 34px;
 }
 
 .hero p {
-  margin: 18px 0;
+  margin: 20px 0;
 }
 
 button {
@@ -63,12 +66,12 @@ button {
   border: none;
   padding: 13px 25px;
   border-radius: 8px;
-  font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .games {
-  padding: 30px 15px;
+  padding: 35px 15px;
   text-align: center;
 }
 
@@ -78,19 +81,30 @@ button {
 }
 
 .game {
-  background: #151f32;
-  margin: 15px auto;
-  padding: 25px;
-  max-width: 350px;
-  border-radius: 12px;
+  background: #142139;
+  max-width: 380px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 14px;
   border: 1px solid #00e5ff;
 }
 
+.game img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 .game h3 {
+  margin: 15px;
+  color: #00e5ff;
+}
+
+.game p {
   margin-bottom: 15px;
 }
 
 footer {
+  background: #111c30;
   text-align: center;
   padding: 25px;
   color: #aaa;
@@ -113,40 +127,51 @@ footer {
 
 <section class="hero" id="home">
   <h2>WELCOME GAMERS!</h2>
-  <p>Enter The World Of Gaming</p>
+  <p>Play, Explore and Enjoy Gaming!</p>
   <button onclick="document.getElementById('games').scrollIntoView()">
     Explore Games
   </button>
 </section>
 
 <section class="games" id="games">
+
   <h2>🔥 POPULAR GAMES</h2>
 
   <div class="game">
-    <h3>🎯 Free Fire</h3>
+    <img src="https://placehold.co/600x300/151f32/00e5ff?text=FREE+FIRE" alt="Free Fire">
+    <h3>🎯 FREE FIRE</h3>
     <p>Battle Royale Gaming</p>
+    <button onclick="alert('Free Fire selected!')">Play Now</button>
   </div>
 
   <div class="game">
+    <img src="https://placehold.co/600x300/151f32/00e5ff?text=GTA+V" alt="GTA V">
     <h3>🚗 GTA V</h3>
     <p>Open World Gaming</p>
+    <button onclick="alert('GTA V selected!')">Play Now</button>
   </div>
 
   <div class="game">
-    <h3>⛏️ Minecraft</h3>
+    <img src="https://placehold.co/600x300/151f32/00e5ff?text=MINECRAFT" alt="Minecraft">
+    <h3>⛏️ MINECRAFT</h3>
     <p>Creative Gaming</p>
+    <button onclick="alert('Minecraft selected!')">Play Now</button>
   </div>
+
 </section>
 
 <section class="games" id="about">
   <h2>ABOUT US</h2>
-  <p>This is Babu's Gaming Website!</p>
+  <p>Welcome to BABU GAMING Website!</p>
+  <p>Made with ❤️ by Babu</p>
 </section>
 
 <footer>
-  <p>© 2026 Babu Gaming</p>
+  <p>© 2026 BABU GAMING</p>
+  <p>All Rights Reserved</p>
 </footer>
 
 </body>
 </html>
+
 

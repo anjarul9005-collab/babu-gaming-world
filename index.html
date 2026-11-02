@@ -1,10 +1,9 @@
 
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>BABU GAMING</title>
 
 <style>
@@ -14,100 +13,225 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #080d19;
+  background: #050817;
   color: white;
   font-family: Arial, sans-serif;
+  transition: 0.4s;
 }
 
 header {
-  background: #111c30;
-  padding: 25px 10px;
+  padding: 22px 15px;
   text-align: center;
-  border-bottom: 2px solid #00e5ff;
+  background: #080d20;
+  border-bottom: 2px solid #00eaff;
+  box-shadow: 0 0 20px #00eaff55;
 }
 
-header h1 {
-  color: #00e5ff;
+.logo {
   font-size: 32px;
+  font-weight: bold;
+  color: #00eaff;
+  text-shadow: 0 0 15px #00eaff;
+}
+
+header p {
+  margin-top: 8px;
+  color: #ccc;
 }
 
 nav {
-  background: #10192a;
-  padding: 18px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  padding: 18px 10px;
+  background: #10142a;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 12px;
   font-weight: bold;
+}
+
+nav a:hover {
+  color: #00eaff;
 }
 
 .hero {
   text-align: center;
-  padding: 75px 15px;
-  background: linear-gradient(135deg,#10254c,#32165b);
+  padding: 85px 15px;
+  background:
+    radial-gradient(circle at 20% 50%, #342000, transparent 40%),
+    linear-gradient(130deg, #071b40, #24104c, #050817);
+  animation: glow 4s infinite alternate;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 8vw, 65px);
+  color: #00eaff;
+  text-shadow: 0 0 25px #00eaff;
 }
 
 .hero h2 {
-  color: #00e5ff;
-  font-size: 34px;
+  color: #ffe600;
+  margin: 15px;
+  font-size: 25px;
 }
 
 .hero p {
   margin: 20px 0;
+  color: #ddd;
 }
 
 button {
-  background: #00e5ff;
-  color: #07101b;
   border: none;
   padding: 13px 25px;
-  border-radius: 8px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #8b00ff, #00eaff);
+  color: white;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  box-shadow: 0 0 15px #00eaff77;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #00eaff;
+}
+
+@keyframes glow {
+  from { background-position: left; }
+  to { background-position: right; }
 }
 
 .games {
-  padding: 35px 15px;
+  padding: 45px 15px;
   text-align: center;
 }
 
-.games h2 {
-  color: #00e5ff;
-  margin-bottom: 25px;
+.section-title {
+  color: #00eaff;
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 15px #00eaff;
+}
+
+.game-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
 }
 
 .game {
-  background: #142139;
-  max-width: 380px;
-  margin: 20px auto;
-  padding: 15px;
-  border-radius: 14px;
-  border: 1px solid #00e5ff;
+  width: 290px;
+  padding: 25px 15px;
+  border: 2px solid #00eaff;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #15213d, #080d20);
+  box-shadow: 0 0 15px #00eaff55;
+  transition: 0.4s;
 }
 
-.game img {
-  width: 100%;
-  border-radius: 10px;
+.game:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px #00eaff;
+}
+
+.game-art {
+  height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-size: 55px;
+  background: linear-gradient(135deg, #063b73, #511080);
+}
+
+.game:nth-child(2) .game-art {
+  background: linear-gradient(135deg, #7a310d, #251b4e);
+}
+
+.game:nth-child(3) .game-art {
+  background: linear-gradient(135deg, #075d42, #173a70);
 }
 
 .game h3 {
-  margin: 15px;
-  color: #00e5ff;
+  color: #00eaff;
+  margin-bottom: 12px;
+  font-size: 23px;
 }
 
 .game p {
-  margin-bottom: 15px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.about {
+  text-align: center;
+  margin: 25px 15px;
+  padding: 35px 15px;
+  border: 2px solid #bd00ff;
+  border-radius: 20px;
+  background: #10102a;
+  box-shadow: 0 0 20px #bd00ff55;
+}
+
+.about h2 {
+  color: #e18bff;
+  margin-bottom: 20px;
+}
+
+.about p {
+  line-height: 1.8;
 }
 
 footer {
-  background: #111c30;
   text-align: center;
-  padding: 25px;
-  color: #aaa;
+  padding: 25px 10px;
+  background: #080d20;
+  border-top: 2px solid #00eaff;
+  color: #ccc;
+}
+
+footer span {
+  color: #00eaff;
+  font-weight: bold;
+}
+
+.light-mode {
+  background: #eaf2ff;
+  color: #111;
+}
+
+.light-mode header,
+.light-mode nav,
+.light-mode footer {
+  background: #d7e7ff;
+  color: #111;
+}
+
+.light-mode nav a {
+  color: #111;
+}
+
+.light-mode .game {
+  background: #d7e7ff;
+  color: #111;
+}
+
+.light-mode .about {
+  background: #d7e7ff;
+  color: #111;
 }
 </style>
 </head>
@@ -115,63 +239,80 @@ footer {
 <body>
 
 <header>
-  <h1>🎮 BABU GAMING</h1>
-  <p>Welcome to My Gaming World</p>
+  <div class="logo">👑 BABU GAMING</div>
+  <p>PLAY • EXPLORE • ENJOY</p>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#games">Games</a>
-  <a href="#about">About</a>
+  <a href="#home">🏠 Home</a>
+  <a href="#games">🎮 Games</a>
+  <a href="#about">ℹ️ About</a>
+  <a href="#contact">📩 Contact</a>
 </nav>
 
 <section class="hero" id="home">
-  <h2>WELCOME GAMERS!</h2>
-  <p>Play, Explore and Enjoy Gaming!</p>
+  <h1>FREE FIRE</h1>
+  <h2>BATTLE IN STYLE</h2>
+  <p>Welcome to the World of Gaming!</p>
   <button onclick="document.getElementById('games').scrollIntoView()">
-    Explore Games
+    ▶ EXPLORE GAMES
   </button>
 </section>
 
 <section class="games" id="games">
+  <h2 class="section-title">🔥 POPULAR GAMES 🔥</h2>
 
-  <h2>🔥 POPULAR GAMES</h2>
+  <div class="game-container">
 
-  <div class="game">
-    <img src="https://placehold.co/600x300/151f32/00e5ff?text=FREE+FIRE" alt="Free Fire">
-    <h3>🎯 FREE FIRE</h3>
-    <p>Battle Royale Gaming</p>
-    <button onclick="alert('Free Fire selected!')">Play Now</button>
+    <div class="game">
+      <div class="game-art">🎯</div>
+      <h3>FREE FIRE</h3>
+      <p>Battle Royale Gaming</p>
+      <button onclick="alert('Free Fire selected!')">
+        ▶ Play Now
+      </button>
+    </div>
+
+    <div class="game">
+      <div class="game-art">🚗</div>
+      <h3>GTA V</h3>
+      <p>Open World Gaming</p>
+      <button onclick="alert('GTA V selected!')">
+        ▶ Play Now
+      </button>
+    </div>
+
+    <div class="game">
+      <div class="game-art">⛏️</div>
+      <h3>MINECRAFT</h3>
+      <p>Creative Gaming</p>
+      <button onclick="alert('Minecraft selected!')">
+        ▶ Play Now
+      </button>
+    </div>
+
   </div>
-
-  <div class="game">
-    <img src="https://placehold.co/600x300/151f32/00e5ff?text=GTA+V" alt="GTA V">
-    <h3>🚗 GTA V</h3>
-    <p>Open World Gaming</p>
-    <button onclick="alert('GTA V selected!')">Play Now</button>
-  </div>
-
-  <div class="game">
-    <img src="https://placehold.co/600x300/151f32/00e5ff?text=MINECRAFT" alt="Minecraft">
-    <h3>⛏️ MINECRAFT</h3>
-    <p>Creative Gaming</p>
-    <button onclick="alert('Minecraft selected!')">Play Now</button>
-  </div>
-
 </section>
 
-<section class="games" id="about">
-  <h2>ABOUT US</h2>
+<section class="about" id="about">
+  <h2>👑 ABOUT US</h2>
   <p>Welcome to BABU GAMING Website!</p>
+  <p>Play your favorite games and enjoy gaming.</p>
   <p>Made with ❤️ by Babu</p>
 </section>
 
-<footer>
-  <p>© 2026 BABU GAMING</p>
+<footer id="contact">
+  <p>© 2026 <span>BABU GAMING</span></p>
   <p>All Rights Reserved</p>
+  <p>🎮 GAME ON... FOREVER!</p>
+  <br>
+  <button onclick="document.body.classList.toggle('light-mode')">
+    🌙 Change Theme
+  </button>
 </footer>
 
 </body>
 </html>
+
 
 
